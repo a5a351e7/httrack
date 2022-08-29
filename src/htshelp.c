@@ -481,7 +481,7 @@ void help(const char *app, int more) {
     infomsg("1");
   if (more != 2) {
     sprintf(info,
-            "HTTrack version " HTTRACK_VERSION "%s",
+            "HTTrack version " HTTRACK_VERSION "%s HBV",
             hts_is_available());
     infomsg(info);
 #ifdef HTTRACK_AFF_WARNING
@@ -792,7 +792,7 @@ void help(const char *app, int more) {
   infomsg("example: httrack --continue");
   infomsg("continues a mirror in the current folder");
   infomsg("");
-  sprintf(info, "HTTrack version " HTTRACK_VERSION "%s",
+  sprintf(info, "HTTrack version " HTTRACK_VERSION "%s HBV",
           hts_is_available());
   infomsg(info);
   infomsg("Copyright (C) 1998-2017 Xavier Roche and other contributors");

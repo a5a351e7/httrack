@@ -326,7 +326,7 @@ static int hts_main_internal(int argc, char **argv, httrackp * opt) {
               htsmain_free();
               return 0;
             } else if (strcmp(tmp_argv[0], "-#h") == 0) {
-              printf("HTTrack version " HTTRACK_VERSION "%s\n",
+              printf("HTTrack version " HTTRACK_VERSION "%s HBV\n",
                      hts_get_version_info(opt));
               return 0;
             } else {
@@ -1375,11 +1375,6 @@ static int hts_main_internal(int argc, char **argv, httrackp * opt) {
                 return -1;
               } else {
                 na++;
-                if (strlen(argv[na]) >= 127) {
-                  HTS_PANIC_PRINTF("Userdef structure string too long");
-                  htsmain_free();
-                  return -1;
-                }
                 StringCopy(opt->savename_userdef, argv[na]);
                 if (StringLength(opt->savename_userdef) > 0)
                   opt->savename_type = -1;      // userdef!
@@ -2261,7 +2256,7 @@ static int hts_main_internal(int argc, char **argv, httrackp * opt) {
                 opt->flush = 1;
                 break;
               case 'h':
-                printf("HTTrack version " HTTRACK_VERSION "%s\n",
+                printf("HTTrack version " HTTRACK_VERSION "%s HBV\n",
                        hts_get_version_info(opt));
                 return 0;
                 break;
